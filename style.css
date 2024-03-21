@@ -1,0 +1,280 @@
+/* importing the fonts  */
+@font-face {
+  font-family: "Young Serif";
+  src: url(assets/fonts/young-serif/YoungSerif-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Outfit";
+  src: url(assets/fonts/outfit/Outfit-VariableFont_wght.ttf) format("truetype");
+}
+:root {
+  /* colors */
+  /* primary */
+  --color-primary-Nutmeg: hsl(14, 45%, 36%);
+  --color-primary-DarkRaspberry: hsl(332, 51%, 32%);
+  /* neutral */
+  --color-neutral-white: hsl(0, 0%, 100%);
+  --color-neutral-roseWite: hsl(330, 100%, 98%);
+  --color-neutral-eggShell: hsl(30, 54%, 90%);
+  --color-neutral-lightGray: hsl(30, 18%, 87%);
+  --color-neutral-wengeBrown: hsl(30, 10%, 34%);
+  --color-neutral-darkCharcoal: hsl(24, 5%, 18%);
+
+  /* font sizes */
+
+  --font-size-100: 0.875rem;
+  --font-size-200: 0.9375rem;
+  --font-size-300: 1rem;
+  --font-size-400: 1.25rem;
+  --font-size-500: 1.5rem;
+  --font-size-600: 1.75rem;
+  --font-size-700: 2rem;
+  --font-size-800: 2.5rem;
+  --font-size-900: 3rem;
+  --font-size-1000: 3.5rem;
+  --font-size-1100: 4rem;
+  --font-size-1200: 5rem;
+
+  --font-size-primary-heading: var(--font-size-900);
+  --font-size-secondary-heading: var(--font-size-900);
+
+  /* font weight */
+  --font-wieght-small: 400;
+  --font-wieght-mid: 500;
+  --font-wieght-bold: 700;
+
+  /* sizes */
+  --size-100: 0.875rem;
+  --size-200: 0.9375rem;
+  --size-300: 1rem;
+  --size-400: 1.25rem;
+  --size-500: 1.5rem;
+  --size-600: 1.75rem;
+  --size-700: 2rem;
+  --size-800: 2.5rem;
+  --size-900: 3rem;
+  --size-1000: 3.5rem;
+  --size-1100: 4rem;
+  --size-1200: 5rem;
+
+  --font-familiy-ys: "Young Serif", sans-serif;
+  --font-familiy-outfit: "Outfit", sans-serif;
+}
+
+/* Css reset by andy bell */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* utitity classes */
+
+.ff-outfit {
+  font-family: var(--font-familiy-outfit);
+}
+.ff-young {
+  font-family: var(--font-familiy-ys);
+}
+.bg-color-neutral-white {
+  background-color: var(--color-neutral-white);
+}
+.bg-color-neutral-eggShell {
+  background-color: var(--color-neutral-eggShell);
+}
+.bg-color-neutral-rosewhite {
+  background-color: var(--color-neutral-roseWite);
+}
+
+.color-primary-DarkRaspberry {
+  color: var(--color-primary-DarkRaspberry);
+}
+.color-primary-nutmeg {
+  color: var(--color-primary-Nutmeg);
+}
+.color-neutral-wengeBrown {
+  color: var(--color-neutral-wengeBrown);
+}
+.color-neutral-darkCharcoal {
+  color: var(--color-neutral-darkCharcoal);
+}
+
+.line-height-2{
+  line-height: 2;
+}
+.line-height-2half{
+  line-height: 2.5;
+}
+
+.fw-bold{
+  font-weight: var(--font-wieght-bold);
+  
+}
+.fw-mid{
+  font-weight: var(--font-wieght-mid);
+}
+.fw-small{
+  font-weight: var(--font-wieght-small);
+  
+}
+
+
+
+/* General styling */
+
+body {
+  font-family: var(--font-familiy-ys);
+  color: var(--color-neutral-wengeBrown);
+  font-weight: var(--font-wieght-mid);
+}
+p,
+li,
+h3 {
+  font-family: var(--font-familiy-outfit);
+}
+
+hr{
+  columns: var(--color-neutral-darkCharcoal);
+  opacity: .5;
+}
+.container {
+  width: min(800px, calc(100% - 2rem));
+  margin-inline: auto;
+  margin-top: var(--size-1200);
+  margin-bottom: var(--size-1200);
+  padding: var(--size-800);
+  border-radius: var(--size-300);
+}
+
+@media (max-width: 40em) {
+  
+  .container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+  }
+}
+.container > :not(:first-child) {
+  margin-top: var(--size-500);
+}
+.container > :nth-child(1) img {
+  border-radius: var(--size-100);
+}
+
+@media (max-width: 40em) {
+  .container > :nth-child(1) img {
+    border-radius: 0;
+  }
+  .container > :not(:first-child ){
+    margin: 0 var(--size-500) ;
+  }
+  .container > :not(:last-child ){
+    margin-bottom: var(--size-500);
+  }
+}
+
+.container > :nth-child(3) {
+  border-radius: var(--size-100);
+  padding: var(--size-300);
+}
+
+
+ol > :not(:nth-child(1)){
+  padding-top: var(--size-200);
+}
+li::marker{
+color: var(--color-primary-Nutmeg);
+font-weight: var(--font-wieght-bold);
+}
+.container > :last-child span{
+  color: var(--color-primary-Nutmeg);
+font-weight: var(--font-wieght-bold);
+}
+.container > :last-child > :nth-child(2) {
+  padding:  var(--size-100) 0;
+} 
+.even-columns{
+  padding-bottom: var(--size-300);
+
+}
+.even-columns p{
+  margin-left: var(--size-600);
+  position: relative;
+
+}
+.even-columns span{
+  position: absolute;
+  left: 50%;
+}
+
+
